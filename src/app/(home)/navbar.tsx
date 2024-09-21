@@ -17,11 +17,14 @@ import {
   HeartIcon,
   MenuIcon,
   Search,
+  ShoppingBag,
   User2Icon,
 } from "lucide-react";
 
 import Link from "next/link";
 import React from "react";
+import Searching from "./search";
+import SearchProducts from "../search/SearchProducts";
 
 function Navbar() {
   return (
@@ -46,18 +49,26 @@ function Navbar() {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-        <User2Icon />
+        <Link href={"/profile"}>
+          <User2Icon />
+        </Link>
         <Link
           href={"/search"}
           className=" aspect-square rounded-full h-16 grid place-content-center bg-blue-900 shadow-lg"
         >
           <Search className=" text-white" />
         </Link>
-        <CarTaxiFrontIcon />
-        <HeartIcon />
+        <Link href={"/cart"}>
+          <ShoppingBag />
+        </Link>
+        <Link href={"/wishlist"}>
+          <HeartIcon />
+        </Link>
       </nav>
       <header className="hidden md:flex justify-between py-4 items-center px-10 fixed top-0 z-20 w-full bg-white shadow-lg">
-        <h1 className="text-3xl font-semibold tracking-tighter">wethenew</h1>
+        <Link href={"/"} className="text-3xl font-semibold tracking-tighter">
+          wethenew
+        </Link>
 
         <nav className="tracking-tight text-gray-500 text-md space-x-8">
           <Link
@@ -80,15 +91,10 @@ function Navbar() {
           </Link>
         </nav>
 
-        <div className="flex items-center space-x-2 w-96 relative ">
-          <Input
-            type="text"
-            placeholder="Search for a brand, a model..."
-            className="bg-transparent border-b border-gray-300 focus:outline-none focus:border-black transition-colors duration-200"
-          />
-          <Search className="text-gray-500 hover:text-black cursor-pointer absolute right-[10%]" />
-        </div>
-
+        {/*  */}
+        <Link href={"/search"}>
+          <SearchProducts />
+        </Link>
         <div className="flex space-x-6 items-center">
           <Link
             href="/"
@@ -97,7 +103,7 @@ function Navbar() {
             <User2Icon className="text-gray-500" />
           </Link>
           <Link
-            href="/"
+            href="/wishlist"
             className="hover:text-black transition-colors duration-200"
           >
             <HeartIcon className="text-gray-500" />
