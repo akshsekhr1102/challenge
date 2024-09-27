@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Wethenew() {
   return (
-    <div className="fixed  top-0 left-0 right-0 flex justify-between items-center py-3 px-3 bg-white  z-10">
+    <div className="  md:hidden top-0 left-0 right-0 flex justify-between items-center py-3 px-3 bg-white  z-10">
       <Link href={"/"}>
         <MoveRight />
       </Link>

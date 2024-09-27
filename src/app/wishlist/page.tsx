@@ -1,3 +1,3 @@
 export default function Wishlist() {
-  return <div className="mt-16">Wishlist</div>;
+  return <div className="">Wishlist</div>;
 }

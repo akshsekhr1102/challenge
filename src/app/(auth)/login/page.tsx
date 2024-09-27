@@ -48,7 +48,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="mt-20">
+    <div className=" flex flex-col justify-center  items-center border shadow-lg  max-w-96 px-5 py-10">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

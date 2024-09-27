@@ -24,7 +24,7 @@ export default function SearchProducts({ params, searchParams }: any) {
         <Input
           value={searchProduct}
           onChange={(e) => setSearchProduct(e.target.value)}
-          placeholder="search for products"
+          placeholder="Search for a brand, a model...."
           className="bg-transparent border-b border-gray-300 focus:outline-none focus:border-black transition-colors duration-200"
         />
         <SearchIcon className="text-gray-500 hover:text-black cursor-pointer absolute right-[10%]" />

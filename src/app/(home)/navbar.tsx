@@ -65,7 +65,7 @@ function Navbar() {
           <HeartIcon />
         </Link>
       </nav>
-      <header className="hidden md:flex justify-between py-4 items-center px-10 fixed top-0 z-20 w-full bg-white shadow-lg">
+      <header className="hidden md:flex justify-between py-4 items-center px-10  top-0 z-20 w-full bg-white shadow-lg">
         <Link href={"/"} className="text-3xl font-semibold tracking-tighter">
           wethenew
         </Link>
